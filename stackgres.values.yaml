@@ -5,4 +5,4 @@ stackgres:
     userSecret: db-credentials
     passwordSecret: db-credentials
     storageSize: 10Gi
-    replicas: 3
+    replicas: 4
