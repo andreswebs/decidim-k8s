@@ -1,0 +1,8 @@
+stackgres:
+  version: "1.8.0"
+  database:
+    name: decidim
+    userSecret: db-credentials
+    passwordSecret: db-credentials
+    storageSize: 10Gi
+    replicas: 3
