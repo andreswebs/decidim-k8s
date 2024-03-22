@@ -1,0 +1,13 @@
+# Flux ignore
+# https://toolkit.fluxcd.io/components/source/gitrepositories/#excluding-files
+
+# Exclude all
+/*
+
+# Include manifest directories
+!/clusters/
+!/sources/
+!/infrastructure-base/
+!/secrets/
+!/infrastructure/
+!/applicationss/

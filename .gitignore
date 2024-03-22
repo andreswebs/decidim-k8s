@@ -1,0 +1,7 @@
+keys/
+.envrc
+.DS_Store
+
+tmp/
+!tmp/dragonfly.values.yaml
+!tmp/stackgres.values.yaml
