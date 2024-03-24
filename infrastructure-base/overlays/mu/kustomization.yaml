@@ -5,3 +5,12 @@ kind: Kustomization
 resources:
   - ../../base/metrics-server
   - ../../base/o11y
+
+patches:
+  - path: ./patches/metrics-server.release.yml
+    target:
+      group: helm.toolkit.fluxcd.io
+      version: v2beta1
+      kind: HelmRelease
+      name: metrics-server
+      namespace: kube-system
