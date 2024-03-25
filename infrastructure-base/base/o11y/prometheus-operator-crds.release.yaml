@@ -1,0 +1,21 @@
+# https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-operator-crds/values.yaml
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: prometheus-operator-crds
+  namespace: o11y
+spec:
+  releaseName: prometheus-operator-crds
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  chart:
+    spec:
+      chart: prometheus-operator-crds
+      interval: 1m
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community
+        namespace: flux-system
