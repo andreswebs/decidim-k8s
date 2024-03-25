@@ -10,4 +10,3 @@ resources:
   # - grafana.yaml
   # - external-dns.yaml
   # - external-secrets.yaml
-  # - github-actions-runner.yaml
