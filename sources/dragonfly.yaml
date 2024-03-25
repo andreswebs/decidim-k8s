@@ -4,6 +4,7 @@ kind: HelmRepository
 metadata:
   name: dragonfly
 spec:
-  type: oci
   interval: 30m
-  url: oci://ghcr.io/dragonflydb/dragonfly/helm/dragonfly
+  url: https://dragonflyoss.github.io/helm-charts/
+  # type: oci
+  # url: oci://ghcr.io/dragonflydb/dragonfly/helm/dragonfly
