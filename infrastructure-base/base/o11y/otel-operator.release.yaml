@@ -22,6 +22,6 @@ spec:
       certManager:
         enabled: true
 
-dependsOn:
-  - name: cert-manager
-    namespace: cert-manager
+  dependsOn:
+    - name: cert-manager
+      namespace: cert-manager
