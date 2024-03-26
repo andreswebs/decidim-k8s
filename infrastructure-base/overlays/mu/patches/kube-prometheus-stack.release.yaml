@@ -1,0 +1,4 @@
+---
+- op: add
+  path: /spec/chart/spec/version
+  value: "57.1.1"

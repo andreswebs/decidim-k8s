@@ -1,21 +1,26 @@
-# https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-operator-crds/values.yaml
+# https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: prometheus-operator-crds
+  name: kube-prometheus-stack
   namespace: o11y
 spec:
-  releaseName: prometheus-operator-crds
+  releaseName: kube-prometheus-stack
   interval: 5m
   install:
     remediation:
       retries: 3
   chart:
     spec:
-      chart: prometheus-operator-crds
+      chart: kube-prometheus-stack
       interval: 1m
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
         namespace: flux-system
+
+  values:
+    nameOverride: prometheus
+    grafana:
+      enabled: false
