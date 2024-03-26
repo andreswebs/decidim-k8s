@@ -4,3 +4,5 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - kube-prometheus-stack.release.yaml
+  - otel-collector.sa.yaml
+  - otel-operator.release.yaml

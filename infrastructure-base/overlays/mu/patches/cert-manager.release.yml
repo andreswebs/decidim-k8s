@@ -1,0 +1,11 @@
+---
+- op: add
+  path: /spec/chart/spec/version
+  value: v1.12.3
+#
+
+## example for AWS EKS
+# - op: add
+#   path: /spec/values/serviceAccount/annotations/eks.amazonaws.com~1role-arn
+#   value:
+#     eks.amazonaws.com/role-arn: arn:aws:iam::123456789012:role/cert-manager-mu

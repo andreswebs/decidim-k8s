@@ -17,3 +17,11 @@ spec:
   install:
     remediation:
       retries: 3
+
+  values:
+    installCRDs: true
+    serviceAccount:
+      create: true
+      name: cert-manager
+      automountServiceAccountToken: true
+      annotations: {}

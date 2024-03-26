@@ -6,6 +6,7 @@ resources:
   - jetstack.yaml
   - metrics-server.yaml
   - prometheus-community.yaml
+  - open-telemetry.yaml
   - dragonfly.yaml
   - stackgres.yaml
   # - grafana.yaml

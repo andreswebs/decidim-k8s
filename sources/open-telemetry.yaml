@@ -1,0 +1,9 @@
+# See: https://opentelemetry.io/docs/kubernetes/helm/collector/
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: open-telemetry
+spec:
+  interval: 30m
+  url: https://open-telemetry.github.io/opentelemetry-helm-charts

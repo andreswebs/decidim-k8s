@@ -5,6 +5,7 @@ kind: Kustomization
 resources:
   - ../../base/metrics-server
   - ../../base/o11y
+  - ../../base/cert-manager
   - ../../base/dragonfly
   - ../../base/decidim
 
@@ -24,3 +25,27 @@ patches:
       kind: HelmRelease
       name: dragonfly
       namespace: dragonfly-system
+
+  - path: ./patches/kube-prometheus-stack.release.yml
+    target:
+      group: helm.toolkit.fluxcd.io
+      version: v2beta1
+      kind: HelmRelease
+      name: kube-prometheus-stack
+      namespace: o11y
+
+  - path: ./patches/otel-operator.release.yml
+    target:
+      group: helm.toolkit.fluxcd.io
+      version: v2beta1
+      kind: HelmRelease
+      name: kube-prometheus-stack
+      namespace: o11y
+
+  - path: ./patches/cert-manager.release.yml
+    target:
+      group: helm.toolkit.fluxcd.io
+      version: v2beta1
+      kind: HelmRelease
+      name: cert-manager
+      namespace: cert-manager
