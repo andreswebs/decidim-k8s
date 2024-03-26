@@ -1,9 +1,0 @@
-stackgres:
-  version: "1.8.0"
-  database:
-    name: decidim
-    userSecret: db-credentials
-    passwordSecret: db-credentials
-    storageSize: 10Gi
-    replicas: 3
-# helm install --create-namespace --namespace stackgres stackgres-operator --set-string adminui.service.type=ClusterIP https://stackgres.io/downloads/stackgres-k8s/stackgres/latest/helm/stackgres-operator.tgz
