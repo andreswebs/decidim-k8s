@@ -9,7 +9,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: otel-operator
+      chart: opentelemetry-operator
       sourceRef:
         kind: HelmRepository
         name: open-telemetry
