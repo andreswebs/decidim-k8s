@@ -34,14 +34,6 @@ patches:
       name: kube-prometheus-stack
       namespace: o11y
 
-  - path: ./patches/otel-operator.release.yml
-    target:
-      group: helm.toolkit.fluxcd.io
-      version: v2beta1
-      kind: HelmRelease
-      name: otel-operator
-      namespace: o11y
-
   - path: ./patches/cert-manager.release.yml
     target:
       group: helm.toolkit.fluxcd.io
