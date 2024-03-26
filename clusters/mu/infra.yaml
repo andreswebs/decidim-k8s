@@ -14,4 +14,4 @@ spec:
   dependsOn:
     - name: sources
     - name: infra-base
-    - name: secrets
+    # - name: secrets

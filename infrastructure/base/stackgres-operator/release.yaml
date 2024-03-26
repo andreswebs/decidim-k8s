@@ -1,2 +1,24 @@
-# adminui.service.type=ClusterIP
 ---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: stackgres-operator
+  namespace: stackgres
+spec:
+  releaseName: stackgres-operator
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  chart:
+    spec:
+      chart: stackgres-operator
+      interval: 1m
+      sourceRef:
+        kind: HelmRepository
+        name: stackgres
+        namespace: flux-system
+
+  values:
+    deploy:
+      restapi: false

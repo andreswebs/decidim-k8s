@@ -4,3 +4,12 @@ kind: Kustomization
 
 resources:
   - ../../base/stackgres-operator
+
+patches:
+  - path: ./patches/stackgres-operator.release.yml
+    target:
+      group: helm.toolkit.fluxcd.io
+      version: v2beta1
+      kind: HelmRelease
+      name: stackgres-operator
+      namespace: stackgres
