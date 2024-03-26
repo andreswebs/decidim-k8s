@@ -6,6 +6,7 @@ resources:
   - ../../base/metrics-server
   - ../../base/o11y
   - ../../base/dragonfly
+  - ../../base/decidim
 
 patches:
   - path: ./patches/metrics-server.release.yml
