@@ -5,9 +5,9 @@ namespace: flux-system
 resources:
   - jetstack.yaml
   - metrics-server.yaml
+  - prometheus-community.yaml
   - dragonfly.yaml
   - stackgres.yaml
-  - prometheus-community.yaml
   # - grafana.yaml
   # - external-dns.yaml
   # - external-secrets.yaml
