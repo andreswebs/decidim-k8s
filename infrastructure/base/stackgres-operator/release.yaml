@@ -19,6 +19,15 @@ spec:
         name: stackgres
         namespace: flux-system
 
+  # https://gitlab.com/ongresinc/stackgres/-/blob/main/stackgres-k8s/install/helm/stackgres-operator/values.yaml
   values:
     deploy:
       restapi: false
+    prometheus:
+      allowAutobind: true
+    grafana:
+      autoEmbed: false
+
+  dependsOn:
+    - name: kube-prometheus-stack
+      namespace: o11y

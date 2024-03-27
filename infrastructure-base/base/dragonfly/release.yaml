@@ -35,6 +35,13 @@ spec:
       enabled: true
       requests: 128Mi
 
+    serviceMonitor:
+      enabled: true
+
     extraArgs:
       - --dbfilename=dump.rdb
       - --snapshot_cron=0 * * * *
+
+  dependsOn:
+    - name: kube-prometheus-stack
+      namespace: o11y
