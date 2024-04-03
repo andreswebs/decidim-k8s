@@ -8,7 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: feature-doppler
   secretRef:
     name: flux-system
   url: ssh://git@github.com/ElizaAugusta4/decidim-k8s
