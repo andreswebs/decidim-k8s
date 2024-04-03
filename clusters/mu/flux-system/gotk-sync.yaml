@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/andreswebs/decidim-k8s
+  url: ssh://git@github.com/ElizaAugusta4/decidim-k8s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
