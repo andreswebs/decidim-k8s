@@ -5,5 +5,4 @@ metadata:
   name: zalando
 spec:
   interval: 30m
-  url: https://opensource.zalando.com/postgres-operator/charts/postgres-operator/                        
- 
+  url: https://opensource.zalando.com/postgres-operator/charts/postgres-operator/
